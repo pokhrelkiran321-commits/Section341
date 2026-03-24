@@ -1,27 +1,36 @@
-// Example: override Bootstrap color variables
+// Dark Theme Palette
+$black: #000;
+$dark-bg: #050505;
+$dark-card: #121212;
+$starlight: #E0E0E0;
+$gray-light: #A0A0A0;
+$accent: #D4AF37; // Gold accent for a premium feel
 
-$gray-50: #f6f5f4 !default;
-$gray-100: #ecebe9 !default;
-$gray-200: #dad7d2 !default;
-$gray-300: #c5c0b9 !default;
-$gray-400: #b3aca3 !default;
-$gray-500: #a0988d !default;
-$gray-600: #837a6d !default;
-$gray-700: #615b51 !default;
-$gray-800: #433e38 !default;
-$gray-900: #211f1c !default;
-$gray-950: #11100e !default;
-$primary: #000;
-$secondary: #d47f31;
-$light: $gray-100 !default;
-$border-color: $gray-100 !default;
-$border-color-translucent:   $gray-100 !default;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$primary: $starlight;
+$secondary: $accent;
+$light: $starlight;
+$dark: $black;
+
+$body-bg: $dark-bg;
+$body-color: $starlight;
 
 $enable-negative-margins: true !default;
-$enable-rounded:              false !default;
+$enable-rounded:              true !default;
 
-$headings-font-weight: 400 !default;
-$grid-gutter-width:           2.5rem !default;
+$headings-font-weight: 700 !default;
+$grid-gutter-width:           2rem !default;
+
+// Typography
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+$font-family-base: $font-family-sans-serif;
+
+$headings-font-family: $font-family-serif;
 
 // scss-docs-start position-map
 $position-values: (
@@ -68,31 +77,24 @@ $spacers: (
 ) !default;
 // scss-docs-end spacer-variables-maps
 
-$font-family-base: 'Poppins', sans-serif !default;
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem !default;
 $font-size-sm:                $font-size-base * .85 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-xs: 0.75rem !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h1-font-size:                $font-size-base * 3 !default;
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 2 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-// scss-docs-start border-radius-variables
-
-
-
-
 $input-btn-padding-y: 0.85rem !default;
 $input-btn-padding-x: 1.5rem !default;
 
-
-
 $link-decoration:                         none !default;
-$link-hover-color:                        $secondary !default;
-$link-hover-decoration:                   underline !default;
+$link-color:                              $starlight;
+$link-hover-color:                        $accent !default;
+$link-hover-decoration:                   none !default;
