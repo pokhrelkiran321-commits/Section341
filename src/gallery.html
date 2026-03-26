@@ -146,7 +146,7 @@
 
           filtered.forEach((work, index) => {
             const col = document.createElement('div');
-            col.className = 'col-lg-3 col-md-4 col-sm-6 fade-in visible'; // Force visible for re-renders
+            col.className = 'col-lg-3 col-md-4 col-sm-6 fade-in';
 
             col.innerHTML = `
                 <div class="card border-0 h-100 overflow-hidden shadow-sm artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" data-img="${work.image}" data-title="${work.title}" data-artist="${work.artistName}" data-year="${work.year}" data-desc="${work.description}">

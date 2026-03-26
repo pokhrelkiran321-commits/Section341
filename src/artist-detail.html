@@ -139,13 +139,6 @@
                 </div>
             `;
 
-            // Re-observe new fade-in elements
-            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-            }, observerOptions);
-            document.querySelectorAll('.fade-in').forEach(element => observer.observe(element));
-
         } else {
             contentDiv.innerHTML = `
                 <div class="text-center py-10">

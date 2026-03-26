@@ -38,9 +38,26 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
+// Initialize observer for existing elements
 document.querySelectorAll('.fade-in').forEach(element => {
   observer.observe(element);
 });
+
+// MutationObserver to watch for dynamically added elements with .fade-in
+const dynamicObserver = new MutationObserver((mutations) => {
+  mutations.forEach(mutation => {
+    mutation.addedNodes.forEach(node => {
+      if (node.nodeType === 1) { // ELEMENT_NODE
+        if (node.classList.contains('fade-in')) {
+          observer.observe(node);
+        }
+        node.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      }
+    });
+  });
+});
+
+dynamicObserver.observe(document.body, { childList: true, subtree: true });
 
 // Helper function to get query parameters (for artist details)
 export function getQueryParam(param) {

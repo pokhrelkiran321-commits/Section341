@@ -28,6 +28,8 @@ $theme-colors: (
   "light": #E0E0E0
 );
 
+@import "bootstrap/scss/bootstrap";
+
 $font-family-serif: 'Playfair Display', serif;
 $font-family-sans-serif: 'Inter', sans-serif;
 
