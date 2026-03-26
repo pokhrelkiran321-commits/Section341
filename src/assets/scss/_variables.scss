@@ -1,18 +1,15 @@
-// Dark Theme Palette
+// Colors
 $black: #000;
-$dark-bg: #050505;
-$dark-card: #121212;
-$starlight: #E0E0E0;
-$gray-light: #A0A0A0;
-$accent: #D4AF37; // Gold accent for a premium feel
-
 $white: #fff;
-$gray-100: #f8f9fa;
-$gray-800: #343a40;
-$gray-900: #212529;
+$accent-color: #D4AF37; // Gold accent
+
+// Use real colors for Bootstrap variables to avoid compilation errors
+// These can be overridden in _custom.scss using CSS variables where appropriate
+$starlight: #E0E0E0;
+$dark-bg: #050505;
 
 $primary: $starlight;
-$secondary: $accent;
+$secondary: $accent-color;
 $light: $starlight;
 $dark: $black;
 
@@ -96,5 +93,5 @@ $input-btn-padding-x: 1.5rem !default;
 
 $link-decoration:                         none !default;
 $link-color:                              $starlight;
-$link-hover-color:                        $accent !default;
+$link-hover-color:                        $accent-color !default;
 $link-hover-decoration:                   none !default;
