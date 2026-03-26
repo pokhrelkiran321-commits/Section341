@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Grand Palais Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3 px-4">
+        <div class="container-fluid">
+            <a class="museum-logo" href="index.html">GRAND<span>PALAIS</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-10">
+        <div class="container">
+            <div class="row mb-10 text-center">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h1 class="display-3 mb-4">The Collection</h1>
+                    <p class="lead text-muted">A curated selection of the most iconic works from history's greatest masters. Filter by artist to explore their vision.</p>
+                </div>
+            </div>
+
+            <div class="row mb-5 fade-in">
+              <div class="col-lg-12 d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-primary active filter-btn rounded-0" data-filter="all">All Artists</button>
+                <div id="artist-filters" class="d-flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+
+            <div id="gallery-grid" class="row g-4 fade-in">
+                <!-- Loaded dynamically via JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade" id="artworkModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content border-0 bg-transparent shadow-none">
+          <div class="modal-header border-0 p-0 position-relative">
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="card border-0 overflow-hidden shadow-lg">
+              <div class="row g-0">
+                <div class="col-lg-8 bg-black d-flex align-items-center justify-content-center" style="min-height: 50vh;">
+                  <img src="" id="modalImg" class="img-fluid w-100" alt="Artwork Large View" style="max-height: 85vh; object-fit: contain;">
+                </div>
+                <div class="col-lg-4 p-5 d-flex flex-column justify-content-center" style="background-color: var(--card-bg);">
+                  <p id="modalArtist" class="text-primary small text-uppercase mb-2" style="letter-spacing: 0.1rem;"></p>
+                  <h3 id="modalTitle" class="display-6 mb-3"></h3>
+                  <p id="modalYear" class="h6 text-muted mb-4"></p>
+                  <hr class="mb-4">
+                  <p id="modalDesc" class="text-muted"></p>
+                  <div class="mt-5">
+                    <button class="btn btn-outline-primary px-4 py-2 rounded-0" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <a class="museum-logo mb-4 d-inline-block" href="index.html">GRAND<span>PALAIS</span></a>
+            <div class="footer-links mb-5">
+                <a href="index.html" class="nav-link d-inline-block px-3">Home</a>
+                <a href="artists.html" class="nav-link d-inline-block px-3">Artists</a>
+                <a href="gallery.html" class="nav-link d-inline-block px-3">Gallery</a>
+                <a href="about.html" class="nav-link d-inline-block px-3">About</a>
+                <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 Grand Palais Art Gallery. All artwork is within the public domain.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module">
+        import artists from './assets/js/data.js';
+
+        const grid = document.getElementById('gallery-grid');
+        const filterContainer = document.getElementById('artist-filters');
+
+        // Prepare all artworks with artist name
+        const allArtworks = [];
+        artists.forEach(artist => {
+          artist.artworks.forEach(work => {
+            allArtworks.push({
+              ...work,
+              artistName: artist.name,
+              artistId: artist.id
+            });
+          });
+        });
+
+        // Load Filters
+        artists.forEach(artist => {
+          const btn = document.createElement('button');
+          btn.className = 'btn btn-outline-primary filter-btn rounded-0';
+          btn.textContent = artist.name;
+          btn.setAttribute('data-filter', artist.id);
+          filterContainer.appendChild(btn);
+        });
+
+        // Render Artworks
+        function renderArtworks(filterId = 'all') {
+          grid.innerHTML = '';
+          const filtered = filterId === 'all' ? allArtworks : allArtworks.filter(w => w.artistId === filterId);
+
+          filtered.forEach((work, index) => {
+            const col = document.createElement('div');
+            col.className = 'col-lg-3 col-md-4 col-sm-6 fade-in visible'; // Force visible for re-renders
+
+            col.innerHTML = `
+                <div class="card border-0 h-100 overflow-hidden shadow-sm artwork-card" data-bs-toggle="modal" data-bs-target="#artworkModal" data-img="${work.image}" data-title="${work.title}" data-artist="${work.artistName}" data-year="${work.year}" data-desc="${work.description}">
+                    <div class="ratio ratio-1x1 overflow-hidden bg-black">
+                        <img src="${work.image}" class="card-img-top object-fit-cover" alt="${work.title}" style="transition: transform 0.5s ease; opacity: 0.8;">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end p-4 text-white" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)); opacity: 0; transition: opacity 0.3s ease;">
+                          <p class="small text-uppercase mb-1" style="letter-spacing: 0.1rem;">${work.artistName}</p>
+                          <h4 class="h6 mb-0">${work.title}</h4>
+                        </div>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(col);
+          });
+        }
+
+        renderArtworks();
+
+        // Filter Logic
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            renderArtworks(e.target.getAttribute('data-filter'));
+          });
+        });
+
+        // Modal Logic
+        const artworkModal = document.getElementById('artworkModal');
+        artworkModal.addEventListener('show.bs.modal', (event) => {
+          const card = event.relatedTarget;
+          document.getElementById('modalImg').src = card.getAttribute('data-img');
+          document.getElementById('modalTitle').textContent = card.getAttribute('data-title');
+          document.getElementById('modalArtist').textContent = card.getAttribute('data-artist');
+          document.getElementById('modalYear').textContent = card.getAttribute('data-year');
+          document.getElementById('modalDesc').textContent = card.getAttribute('data-desc');
+        });
+
+    </script>
+    <style>
+      .artwork-card { cursor: pointer; }
+      .artwork-card:hover .card-img-overlay { opacity: 1 !important; }
+      .artwork-card:hover img { transform: scale(1.1); opacity: 1 !important; }
+
+      .btn-outline-primary.active {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #000;
+      }
+    </style>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grand Palais Art Gallery</title>
+    <title>Artists | Grand Palais Art Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -20,10 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="artists.html">Artists</a>
+                        <a class="nav-link active" href="artists.html">Artists</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
@@ -45,36 +45,19 @@
         </div>
     </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="min-vh-100 d-flex align-items-center justify-content-center text-center p-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1574359411659-15573a27f812?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;">
-            <div class="fade-in">
-                <p class="text-uppercase text-white mb-2" style="letter-spacing: 0.5rem; font-weight: 500;">Grand Palais Art Gallery</p>
-                <h1 class="display-1 text-white mb-4">Timeless Masterpieces.</h1>
-                <p class="lead text-white-50 mb-5 max-w-700 mx-auto">Explore the works of history's most renowned artists in a modern, immersive gallery experience.</p>
-                <a href="gallery.html" class="btn btn-primary px-5 py-3 rounded-0">Explore the Collection</a>
-            </div>
-        </section>
-
-        <!-- Featured Artists Preview -->
-        <section class="py-10">
-            <div class="container">
-                <div class="row mb-10 text-center">
-                    <div class="col-lg-8 mx-auto fade-in">
-                        <h2 class="display-4 mb-3">A Curated Journey</h2>
-                        <p class="text-muted">From the Italian Renaissance to 20th-century Surrealism, discover the visionaries who defined the course of art history.</p>
-                    </div>
-                </div>
-
-                <div id="featured-artists" class="row g-4">
-                    <!-- Loaded dynamically via JS -->
-                </div>
-
-                <div class="text-center mt-5 fade-in">
-                    <a href="artists.html" class="btn btn-outline-primary px-4 py-2 rounded-0">View All Artists</a>
+    <main class="py-10">
+        <div class="container">
+            <div class="row mb-10 text-center">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h1 class="display-3 mb-4">The Masters</h1>
+                    <p class="lead text-muted">A collection of history's most celebrated visionaries, whose works have shaped the world of art as we know it.</p>
                 </div>
             </div>
-        </section>
+
+            <div id="artists-grid" class="row g-4">
+                <!-- Loaded dynamically via JS -->
+            </div>
+        </div>
     </main>
 
     <footer class="footer mt-auto">
@@ -87,11 +70,6 @@
                 <a href="about.html" class="nav-link d-inline-block px-3">About</a>
                 <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
             </div>
-            <div class="social-links mb-4">
-                <a href="#" class="btn btn-icon text-muted fs-4 mx-2"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="btn btn-icon text-muted fs-4 mx-2"><i class="bi bi-twitter-x"></i></a>
-                <a href="#" class="btn btn-icon text-muted fs-4 mx-2"><i class="bi bi-facebook"></i></a>
-            </div>
             <p class="text-muted small mb-0">&copy; 2025 Grand Palais Art Gallery. All artwork is within the public domain.</p>
         </div>
     </footer>
@@ -100,30 +78,29 @@
     <script type="module">
         import artists from './assets/js/data.js';
 
-        const featuredArtists = artists.slice(0, 3);
-        const artistRow = document.getElementById('featured-artists');
+        const grid = document.getElementById('artists-grid');
 
-        featuredArtists.forEach((artist, index) => {
+        artists.forEach((artist, index) => {
             const col = document.createElement('div');
             col.className = 'col-lg-4 col-md-6 fade-in';
-            col.style.transitionDelay = `${index * 0.1}s`;
+            col.style.transitionDelay = `${index * 0.05}s`;
 
-            // Using a generic museum-style placeholder if specific portrait not in data
             const portrait = artist.artworks[0].image;
 
             col.innerHTML = `
-                <div class="card border-0 h-100 overflow-hidden">
+                <div class="card border-0 h-100 overflow-hidden shadow-sm">
                     <div class="ratio ratio-1x1 overflow-hidden">
                         <img src="${portrait}" class="card-img-top object-fit-cover" alt="${artist.name}" style="transition: transform 0.5s ease;">
                     </div>
-                    <div class="card-body p-4 text-center">
+                    <div class="card-body p-5 text-center">
                         <h3 class="h4 mb-1">${artist.name}</h3>
-                        <p class="text-muted small text-uppercase mb-3" style="letter-spacing: 0.1rem;">${artist.style}</p>
-                        <a href="artist-detail.html?id=${artist.id}" class="btn btn-link text-primary text-decoration-none p-0">View Profile &rarr;</a>
+                        <p class="text-primary small mb-2">${artist.years}</p>
+                        <p class="text-muted small text-uppercase mb-4" style="letter-spacing: 0.1rem;">${artist.nationality} • ${artist.style}</p>
+                        <a href="artist-detail.html?id=${artist.id}" class="btn btn-primary px-4 py-2 w-100 rounded-0">View Profile</a>
                     </div>
                 </div>
             `;
-            artistRow.appendChild(col);
+            grid.appendChild(col);
         });
     </script>
 </body>

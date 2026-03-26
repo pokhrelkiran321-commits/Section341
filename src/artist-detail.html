@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Detail | Grand Palais Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3 px-4">
+        <div class="container-fluid">
+            <a class="museum-logo" href="index.html">GRAND<span>PALAIS</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-10">
+        <div id="artist-content" class="container">
+            <!-- Loaded dynamically via JS -->
+            <div class="text-center py-10" id="loading">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <a class="museum-logo mb-4 d-inline-block" href="index.html">GRAND<span>PALAIS</span></a>
+            <div class="footer-links mb-5">
+                <a href="index.html" class="nav-link d-inline-block px-3">Home</a>
+                <a href="artists.html" class="nav-link d-inline-block px-3">Artists</a>
+                <a href="gallery.html" class="nav-link d-inline-block px-3">Gallery</a>
+                <a href="about.html" class="nav-link d-inline-block px-3">About</a>
+                <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 Grand Palais Art Gallery. All artwork is within the public domain.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module">
+        import artists from './assets/js/data.js';
+        import { getQueryParam } from './assets/js/custom.js';
+
+        const artistId = getQueryParam('id');
+        const artist = artists.find(a => a.id === artistId);
+        const contentDiv = document.getElementById('artist-content');
+
+        if (artist) {
+            document.title = `${artist.name} | Grand Palais Art Gallery`;
+
+            contentDiv.innerHTML = `
+                <div class="row align-items-center mb-10">
+                    <div class="col-lg-5 mb-5 mb-lg-0 fade-in">
+                        <h1 class="display-3 mb-2">${artist.name}</h1>
+                        <p class="h4 text-primary mb-4">${artist.years}</p>
+                        <p class="lead text-muted mb-4">${artist.bio}</p>
+                        <div class="mb-5">
+                          <h4 class="h6 text-uppercase small" style="letter-spacing: 0.1rem;">Nationality</h4>
+                          <p class="text-muted">${artist.nationality}</p>
+                          <h4 class="h6 text-uppercase small" style="letter-spacing: 0.1rem;">Art Style</h4>
+                          <p class="text-muted">${artist.style}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 fade-in">
+                        <div class="ratio ratio-4x3 overflow-hidden shadow-lg">
+                            <img src="${artist.artworks[0].image}" class="img-fluid object-fit-cover" alt="${artist.name}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-10 fade-in">
+                  <div class="col-lg-12">
+                    <h2 class="display-5 mb-5">Key Achievements</h2>
+                    <ul class="list-unstyled row g-4">
+                      ${artist.achievements.map(a => `
+                        <li class="col-md-6">
+                          <div class="d-flex align-items-start">
+                            <i class="bi bi-award-fill text-primary me-3 fs-4"></i>
+                            <p class="text-muted mb-0">${a}</p>
+                          </div>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="fade-in">
+                    <h2 class="display-5 mb-5 text-center">Notable Works</h2>
+                    <div class="row g-4">
+                        ${artist.artworks.map((work, idx) => `
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                                    <div class="ratio ratio-1x1">
+                                        <img src="${work.image}" class="card-img-top object-fit-cover" alt="${work.title}">
+                                    </div>
+                                    <div class="card-body p-4 text-center">
+                                        <h3 class="h5 mb-1">${work.title}</h3>
+                                        <p class="text-primary small mb-2">${work.year}</p>
+                                        <p class="text-muted small mb-0">${work.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Re-observe new fade-in elements
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+            }, observerOptions);
+            document.querySelectorAll('.fade-in').forEach(element => observer.observe(element));
+
+        } else {
+            contentDiv.innerHTML = `
+                <div class="text-center py-10">
+                    <h1 class="display-3">Artist Not Found</h1>
+                    <p class="lead text-muted">We couldn't find the artist you were looking for.</p>
+                    <a href="artists.html" class="btn btn-primary mt-4 px-5 py-3 rounded-0">Back to Artists</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
