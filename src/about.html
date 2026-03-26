@@ -1,177 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Kiran Pokhrel Photography</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Grand Palais Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3 px-4">
+        <div class="container-fluid">
+            <a class="museum-logo" href="index.html">GRAND<span>PALAIS</span></a>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-sm px-4">
-      <div class="container-fluid px-0">
-        <a class="navbar-brand" href="index.html">
-          <div class="logo-text">K<span>P</span></div>
-        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="mx-auto d-lg-block d-none">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#nature">Nature</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#galaxy">Galaxy</a>
-            </li>
-          </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <div class="d-flex align-items-center gap-4">
-          <a class="nav-link text-uppercase text-xs fw-bold" style="letter-spacing: 0.1rem; font-size: 0.75rem;" href="https://www.kiran-pokhrel.com.np/" target="_blank">Portfolio Link</a>
-          <a class="d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
-            <i class="bi bi-list fs-3 text-white"></i>
-          </a>
-        </div>
-      </div>
     </nav>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="py-lg-11 py-8 text-center bg-black">
-        <div class="container pt-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <h1 class="display-3 mb-4">The Artist Behind the Lens</h1>
-              <p class="lead text-muted">Kiran Pokhrel is a visual storyteller dedicated to capturing the raw beauty of nature and the infinite mysteries of the cosmos.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mission Section -->
-      <section class="py-lg-10 py-5">
+    <main class="py-10">
         <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-md-6">
-              <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Photographer at work" class="img-fluid">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="ms-lg-5">
-                <h2 class="mb-4">Passion for the Wild & The Infinite</h2>
-                <p class="text-muted mb-4">
-                  Driven by a profound respect for the natural world and a curiosity for the celestial, Kiran Pokhrel's work bridges the gap between Earth and the Stars. Every photograph is a testament to the patient observation of light, shadow, and time.
-                </p>
-                <p class="text-muted mb-4">
-                  "I find myself most at home when the city lights fade into the background and the only witnesses are the ancient mountains and the distant galaxies. My mission is to share these fleeting moments of grandeur with the world."
-                </p>
-                <div class="mt-5">
-                  <h4 class="mb-3">Expertise</h4>
-                  <ul class="list-unstyled text-muted">
-                    <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i> Astrophotography & Deep Space Imaging</li>
-                    <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i> Landscape & Wildlife Conservation Photography</li>
-                    <li class="mb-2"><i class="bi bi-check2-circle text-accent me-2"></i> Long Exposure & Low Light Techniques</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="row align-items-center mb-10">
+                <div class="col-lg-6 mb-5 mb-lg-0 fade-in">
+                    <h1 class="display-3 mb-4">A Beacon for the Arts</h1>
+                    <p class="lead text-muted mb-4">The Grand Palais Art Gallery is a digital museum dedicated to preserving and showcasing the masterpieces of the world's most influential artists.</p>
+                    <p class="text-muted mb-5">Our mission is to democratize access to the wonders of art history, providing a high-quality, modern, and educational platform for everyone, everywhere. We curate a vast collection of public domain artworks, from the intricate sketches of Leonardo da Vinci to the vibrant brushstrokes of Van Gogh.</p>
 
-      <!-- Values Section -->
-      <section class="py-lg-10 py-5 bg-black">
-        <div class="container text-center">
-          <h2 class="mb-5">Core Philosophies</h2>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="card h-100 p-4 border-0 bg-transparent">
-                <div class="card-body">
-                  <div class="mb-4 text-accent">
-                    <i class="bi bi-eye fs-1"></i>
-                  </div>
-                  <h3 class="h5">Observation</h3>
-                  <p class="text-muted">Seeing what others overlook. It's about the subtle shift in light before dawn or the faint glow of a distant nebula.</p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h3 class="h4">Our Collection</h3>
+                            <p class="small text-muted">Over 1,000 public domain masterpieces archived and accessible for free.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="h4">Education First</h3>
+                            <p class="small text-muted">Comprehensive biographies and context for every artist and artwork in our collection.</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card h-100 p-4 border-0 bg-transparent">
-                <div class="card-body">
-                  <div class="mb-4 text-accent">
-                    <i class="bi bi-hourglass-split fs-1"></i>
-                  </div>
-                  <h3 class="h5">Patience</h3>
-                  <p class="text-muted">Waiting hours for the perfect alignment of stars or the exact moment a creature emerges from the shadows.</p>
+                <div class="col-lg-6 fade-in">
+                    <div class="ratio ratio-4x5 overflow-hidden rounded-0">
+                        <img src="https://images.unsplash.com/photo-1518998053502-517e299a2e94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" class="img-fluid object-fit-cover shadow-lg" alt="Museum Hall">
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="card h-100 p-4 border-0 bg-transparent">
-                <div class="card-body">
-                  <div class="mb-4 text-accent">
-                    <i class="bi bi-heart fs-1"></i>
-                  </div>
-                  <h3 class="h5">Reverence</h3>
-                  <p class="text-muted">Approaching nature and space with deep respect, ensuring that the act of photography honors the subject.</p>
+
+            <div class="row text-center mb-10 fade-in">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-5 mb-4">Our Values</h2>
+                    <p class="text-muted">We believe that art has the power to transcend borders and time, connecting us to the past while inspiring the future.</p>
                 </div>
-              </div>
             </div>
-          </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 text-center fade-in">
+                    <div class="display-4 text-primary mb-3">01</div>
+                    <h3 class="h4">Accessibility</h3>
+                    <p class="text-muted small">We strive to make art education available to everyone through our modern, responsive platform.</p>
+                </div>
+                <div class="col-md-4 text-center fade-in">
+                    <div class="display-4 text-primary mb-3">02</div>
+                    <h3 class="h4">Integrity</h3>
+                    <p class="text-muted small">We source our data and images from reputable institutions like Wikimedia Commons and the Met Museum.</p>
+                </div>
+                <div class="col-md-4 text-center fade-in">
+                    <div class="display-4 text-primary mb-3">03</div>
+                    <h3 class="h4">Innovation</h3>
+                    <p class="text-muted small">We use modern technology to create immersive and interactive gallery experiences for our visitors.</p>
+                </div>
+            </div>
         </div>
-      </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container text-center">
-        <div class="footer-logo logo-text">K<span>P</span></div>
-        <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="index.html#nature">Nature</a>
-          <a href="index.html#galaxy">Galaxy</a>
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <a class="museum-logo mb-4 d-inline-block" href="index.html">GRAND<span>PALAIS</span></a>
+            <div class="footer-links mb-5">
+                <a href="index.html" class="nav-link d-inline-block px-3">Home</a>
+                <a href="artists.html" class="nav-link d-inline-block px-3">Artists</a>
+                <a href="gallery.html" class="nav-link d-inline-block px-3">Gallery</a>
+                <a href="about.html" class="nav-link d-inline-block px-3">About</a>
+                <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 Grand Palais Art Gallery. All artwork is within the public domain.</p>
         </div>
-        <div class="copyright">
-          <p class="mb-2">Created by Mr. Kiran Pokhrel</p>
-          <p>&copy; 2025 Kiran Pokhrel Photography • <a href="https://www.kiran-pokhrel.com.np/" target="_blank">www.kiran-pokhrel.com.np</a></p>
-        </div>
-      </div>
     </footer>
 
-    <!-- Offcanvas Nav -->
-    <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
-      <div class="offcanvas-header px-4">
-        <div class="logo-text h3 mt-3">K<span>P</span></div>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav gap-4 mt-5">
-          <li class="nav-item">
-            <a class="nav-link h4" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="index.html#nature">Nature</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="index.html#galaxy">Galaxy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="https://www.kiran-pokhrel.com.np/" target="_blank">Original Site</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
     <script type="module" src="./assets/js/main.js"></script>
-  </body>
+</body>
 </html>

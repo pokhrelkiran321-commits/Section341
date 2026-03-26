@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Grand Palais Art Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3 px-4">
+        <div class="container-fluid">
+            <a class="museum-logo" href="index.html">GRAND<span>PALAIS</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="artists.html">Artists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-10">
+        <div class="container">
+            <div class="row mb-10 text-center">
+                <div class="col-lg-8 mx-auto fade-in">
+                    <h1 class="display-3 mb-4">Get in Touch</h1>
+                    <p class="lead text-muted">Have a question about our collection or want to learn more about our museum? Our team is here to help.</p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-5 fade-in">
+                    <h2 class="h3 mb-5">Contact Information</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-4">
+                            <h4 class="h5 text-primary">Address</h4>
+                            <p class="text-muted small">75008 Paris, France</p>
+                        </li>
+                        <li class="mb-4">
+                            <h4 class="h5 text-primary">Email</h4>
+                            <p class="text-muted small">contact@grandpalais.fr</p>
+                        </li>
+                        <li class="mb-4">
+                            <h4 class="h5 text-primary">Phone</h4>
+                            <p class="text-muted small">+33 (0) 1 44 13 17 17</p>
+                        </li>
+                        <li class="mb-4">
+                            <h4 class="h5 text-primary">Hours</h4>
+                            <p class="text-muted small">Daily: 10:00 AM – 8:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-7 fade-in">
+                    <div class="card p-5 border-0 shadow-sm">
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="form-label text-uppercase small" style="letter-spacing: 0.1rem;">Full Name</label>
+                                <input type="text" class="form-control rounded-0 p-3" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label text-uppercase small" style="letter-spacing: 0.1rem;">Email Address</label>
+                                <input type="email" class="form-control rounded-0 p-3" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="form-label text-uppercase small" style="letter-spacing: 0.1rem;">Subject</label>
+                                <select class="form-select rounded-0 p-3" id="subject">
+                                    <option selected>General Inquiry</option>
+                                    <option>Art Collection</option>
+                                    <option>Education & Workshops</option>
+                                    <option>Press & Media</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label text-uppercase small" style="letter-spacing: 0.1rem;">Message</label>
+                                <textarea class="form-control rounded-0 p-3" id="message" rows="5" placeholder="Your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-5 py-3 w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto">
+        <div class="container text-center">
+            <a class="museum-logo mb-4 d-inline-block" href="index.html">GRAND<span>PALAIS</span></a>
+            <div class="footer-links mb-5">
+                <a href="index.html" class="nav-link d-inline-block px-3">Home</a>
+                <a href="artists.html" class="nav-link d-inline-block px-3">Artists</a>
+                <a href="gallery.html" class="nav-link d-inline-block px-3">Gallery</a>
+                <a href="about.html" class="nav-link d-inline-block px-3">About</a>
+                <a href="contact.html" class="nav-link d-inline-block px-3">Contact</a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 Grand Palais Art Gallery. All artwork is within the public domain.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./assets/js/main.js"></script>
+    <script>
+        document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Our team will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
