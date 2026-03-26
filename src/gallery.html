@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Photography Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-sm px-4">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo-text">K<span>P</span></div>
+        </a>
+
+        <div class="mx-auto d-lg-block d-none">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-4">
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a class="d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
+            <i class="bi bi-list fs-3"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Gallery Hero -->
+      <section class="py-lg-11 py-8 text-center bg-black">
+        <div class="container pt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h1 class="display-3 mb-4">Complete Collection</h1>
+              <p class="lead text-muted">A curated selection of moments from Earth and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Full Gallery -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Forest Whisper" data-desc="A serene view of morning mist filtering through ancient trees.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nature Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Forest Whisper</h3>
+                    <p>Nature Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Nebula Dreams" data-desc="Deep space photography capturing the vibrant colors of a distant nebula.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Nebula Dreams</h3>
+                    <p>Galaxy Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Alpine Serenity" data-desc="A mirror-like lake reflects the majestic peaks of the snow-capped Alps.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nature Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Alpine Serenity</h3>
+                    <p>Nature Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Cosmic Bridge" data-desc="The Milky Way galaxy arcing over a silhouette of jagged mountain peaks.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Cosmic Bridge</h3>
+                    <p>Galaxy Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1444464666168-49d633b867ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Verdant Valleys" data-desc="Rolling green hills covered in lush vegetation under a dramatic sky.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1444464666168-49d633b867ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nature Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Verdant Valleys</h3>
+                    <p>Nature Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Celestial Dance" data-desc="Capturing the aurora borealis dancing over a frozen tundra.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Celestial Dance</h3>
+                    <p>Galaxy Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- More Items -->
+             <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Mountain Majesty" data-desc="Golden light hitting the peaks of a mountain range.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nature Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Mountain Majesty</h3>
+                    <p>Nature Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Stellar Nursery" data-desc="A cluster of young stars forming within a gas cloud.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Stellar Nursery</h3>
+                    <p>Galaxy Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Redwood Giants" data-desc="Ancient trees towering towards the sky.">
+                <div class="img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nature Photo" class="img-fluid">
+                </div>
+                <div class="item-overlay">
+                  <div class="item-info">
+                    <h3>Redwood Giants</h3>
+                    <p>Nature Collection</p>
+                    <span class="captured-by">Captured by Kiran Pokhrel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="footer-logo logo-text">K<span>P</span></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-links mb-5">
+          <a href="#" class="btn btn-outline-light btn-icon mx-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="btn btn-outline-light btn-icon mx-2"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="btn btn-outline-light btn-icon mx-2"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="copyright">
+          <p class="mb-2">Created by Mr. Kiran Pokhrel</p>
+          <p>&copy; 2025 Kiran Pokhrel Photography • <a href="https://www.kiran-pokhrel.com.np/" target="_blank">www.kiran-pokhrel.com.np</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-8">
+                <img src="" id="modalImg" class="img-fluid w-100" alt="Expanded Photo">
+              </div>
+              <div class="col-lg-4 p-5">
+                <h3 id="modalTitle" class="mb-3"></h3>
+                <p id="modalDesc" class="text-muted mb-4"></p>
+                <div class="captured-info">
+                  <small class="text-uppercase letter-spacing-1 d-block mb-1" style="font-size: 0.7rem;">Artist</small>
+                  <p class="h5 mb-4">Kiran Pokhrel</p>
+
+                  <small class="text-uppercase letter-spacing-1 d-block mb-1" style="font-size: 0.7rem;">Location</small>
+                  <p class="text-muted">Wilderness / Deep Space</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offcanvas Nav -->
+    <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header px-4">
+        <div class="logo-text h3 mt-3">K<span>P</span></div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav gap-4 mt-5">
+          <li class="nav-item">
+            <a class="nav-link h4" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4 active" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

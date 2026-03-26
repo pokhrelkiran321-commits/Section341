@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Photography Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top shadow-sm px-4">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo-text">K<span>P</span></div>
+        </a>
+
+        <div class="mx-auto d-lg-block d-none">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-4">
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a class="d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
+            <i class="bi bi-list fs-3"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Contact Hero -->
+      <section class="py-lg-11 py-8 text-center bg-black">
+        <div class="container pt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h1 class="display-3 mb-4">Let's Connect</h1>
+              <p class="lead text-muted">Whether it's for a collaboration, a print inquiry, or just to say hi, I'd love to hear from you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="py-lg-10 py-5">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <h2 class="mb-4">Get in Touch</h2>
+              <p class="text-muted mb-5">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+              <form action="#" method="POST">
+                <div class="mb-4">
+                  <label for="name" class="form-label text-uppercase small letter-spacing-1">Full Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="mb-4">
+                  <label for="email" class="form-label text-uppercase small letter-spacing-1">Email Address</label>
+                  <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="mb-4">
+                  <label for="subject" class="form-label text-uppercase small letter-spacing-1">Subject</label>
+                  <input type="text" class="form-control" id="subject" placeholder="Print Inquiry / Collaboration" required>
+                </div>
+                <div class="mb-4">
+                  <label for="message" class="form-label text-uppercase small letter-spacing-1">Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent w-100">Send Message</button>
+              </form>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+              <div class="contact-info mt-lg-0 mt-5">
+                <h3 class="h4 mb-4">Contact Information</h3>
+                <div class="mb-4">
+                  <small class="text-uppercase text-muted d-block mb-1 letter-spacing-1">Email</small>
+                  <p class="h5">hello@kiran-pokhrel.com.np</p>
+                </div>
+                <div class="mb-4">
+                  <small class="text-uppercase text-muted d-block mb-1 letter-spacing-1">Location</small>
+                  <p class="h5">Kathmandu, Nepal (Available Worldwide)</p>
+                </div>
+                <div class="mb-5">
+                  <small class="text-uppercase text-muted d-block mb-1 letter-spacing-1">Social</small>
+                  <div class="d-flex gap-3 mt-2">
+                    <a href="#" class="btn btn-outline-light btn-icon"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-icon"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-icon"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+
+                <div class="p-5 bg-black border border-muted">
+                  <h4 class="h5 mb-3">Interested in Prints?</h4>
+                  <p class="text-muted small">All photographs in the gallery are available for high-quality limited edition prints. Please mention the photo title in your message.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container text-center">
+        <div class="footer-logo logo-text">K<span>P</span></div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="copyright">
+          <p class="mb-2">Created by Mr. Kiran Pokhrel</p>
+          <p>&copy; 2025 Kiran Pokhrel Photography • <a href="https://www.kiran-pokhrel.com.np/" target="_blank">www.kiran-pokhrel.com.np</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Offcanvas Nav -->
+    <div class="offcanvas offcanvas-end bg-black text-white" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header px-4">
+        <div class="logo-text h3 mt-3">K<span>P</span></div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav gap-4 mt-5">
+          <li class="nav-item">
+            <a class="nav-link h4" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4 active" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -22,18 +22,20 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#nature">Nature</a>
+              <a class="nav-link" href="gallery.html">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#galaxy">Galaxy</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
 
         <div class="d-flex align-items-center gap-4">
-          <a class="nav-link text-uppercase text-xs fw-bold" style="letter-spacing: 0.1rem; font-size: 0.75rem;" href="https://www.kiran-pokhrel.com.np/" target="_blank">Portfolio Link</a>
+          <button id="theme-toggle" class="theme-toggle">
+            <i class="bi bi-moon-stars"></i>
+          </button>
           <a class="d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasNav" role="button" aria-controls="offcanvasNav">
-            <i class="bi bi-list fs-3 text-white"></i>
+            <i class="bi bi-list fs-3"></i>
           </a>
         </div>
       </div>
@@ -47,11 +49,11 @@
           <p class="text-uppercase mb-2">Nature & Galaxy Photography</p>
           <h1 class="display-1">Visual Storytelling through the Lens</h1>
           <p class="lead mb-5">Created by Mr. Kiran Pokhrel</p>
-          <a href="#nature" class="btn btn-outline-light px-5 py-3 text-uppercase rounded-0" style="letter-spacing: 0.2rem;">Explore Gallery</a>
+          <a href="gallery.html" class="btn btn-outline-light px-5 py-3 text-uppercase rounded-0" style="letter-spacing: 0.2rem;">Explore Gallery</a>
         </div>
       </section>
 
-      <!-- Nature Gallery -->
+      <!-- Nature Preview -->
       <section id="nature" class="gallery-section">
         <div class="container">
           <div class="section-title">
@@ -105,62 +107,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Galaxy Gallery -->
-      <section id="galaxy" class="gallery-section bg-black">
-        <div class="container">
-          <div class="section-title">
-            <h2>Galaxy Collection</h2>
-            <p class="text-muted">A journey across the starlit sky</p>
-          </div>
-          <div class="row g-4">
-            <!-- Galaxy Photo 1 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Nebula Dreams" data-desc="Deep space photography capturing the vibrant colors of a distant nebula and thousands of stars.">
-                <div class="img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
-                </div>
-                <div class="item-overlay">
-                  <div class="item-info">
-                    <h3>Nebula Dreams</h3>
-                    <p>The vibrant colors of deep space captured with long exposure.</p>
-                    <span class="captured-by">Captured by Kiran Pokhrel</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Galaxy Photo 2 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Cosmic Bridge" data-desc="The Milky Way galaxy arcing over a silhouette of jagged mountain peaks in the dead of night.">
-                <div class="img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
-                </div>
-                <div class="item-overlay">
-                  <div class="item-info">
-                    <h3>Cosmic Bridge</h3>
-                    <p>The Milky Way stretching across the mountainous horizon.</p>
-                    <span class="captured-by">Captured by Kiran Pokhrel</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Galaxy Photo 3 -->
-            <div class="col-lg-4 col-md-6">
-              <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-img="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" data-title="Celestial Dance" data-desc="Capturing the aurora borealis dancing over a frozen tundra, a rare cosmic performance.">
-                <div class="img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Galaxy Photo" class="img-fluid">
-                </div>
-                <div class="item-overlay">
-                  <div class="item-info">
-                    <h3>Celestial Dance</h3>
-                    <p>The ethereal dance of northern lights against a star-studded sky.</p>
-                    <span class="captured-by">Captured by Kiran Pokhrel</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="text-center mt-5">
+            <a href="gallery.html" class="btn btn-outline-primary rounded-0 px-4 py-2">View Full Collection</a>
           </div>
         </div>
       </section>
@@ -186,8 +134,8 @@
         <div class="footer-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="#nature">Nature</a>
-          <a href="#galaxy">Galaxy</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div class="social-links mb-5">
           <a href="#" class="btn btn-outline-light btn-icon mx-2"><i class="bi bi-instagram"></i></a>
@@ -245,33 +193,15 @@
             <a class="nav-link h4" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h4" href="#nature">Nature</a>
+            <a class="nav-link h4" href="gallery.html">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link h4" href="#galaxy">Galaxy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="https://www.kiran-pokhrel.com.np/" target="_blank">Original Site</a>
+            <a class="nav-link h4" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </div>
 
     <script type="module" src="./assets/js/main.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const photoModal = document.getElementById('photoModal');
-        photoModal.addEventListener('show.bs.modal', (event) => {
-          const item = event.relatedTarget;
-          const img = item.getAttribute('data-img');
-          const title = item.getAttribute('data-title');
-          const desc = item.getAttribute('data-desc');
-
-          document.getElementById('modalImg').src = img;
-          document.getElementById('modalTitle').textContent = title;
-          document.getElementById('modalDesc').textContent = desc;
-        });
-      });
-    </script>
   </body>
 </html>
